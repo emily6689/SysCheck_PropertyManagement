@@ -10,6 +10,7 @@ describe Building do
   end
 
   context 'associations' do
+    it { should belong_to(:owner) }
   end
 
 end

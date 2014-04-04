@@ -9,6 +9,10 @@ describe Owner do
     it { should_not have_valid(:email).when('', nil, "me@.com", "@you.com") }
   end
 
+  context 'associations' do
+    it { should have_many(:buildings)}
+  end
+
   context 'instance methods' do
     it "should return owner's full name" do
       owner = FactoryGirl.create(:owner)

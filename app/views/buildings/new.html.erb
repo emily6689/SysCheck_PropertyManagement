@@ -6,6 +6,7 @@
   <%= f.input :city, required: true  %>
   <%= f.input :state, collection: Building::STATES, required: true %>
   <%= f.input :postalcode, label: 'Postal Code', required: true  %>
+  <%= f.association :owner, label_method: :full_name%>
   <%= f.input :description %>
   <%= f.submit %>
 <%- end -%>
