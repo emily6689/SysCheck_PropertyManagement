@@ -1,4 +1,8 @@
 class OwnersController < ApplicationController
+  def index
+    @owners = Owner.all
+  end
+
   def new
     @owner = Owner.new
   end
@@ -12,6 +16,12 @@ class OwnersController < ApplicationController
       flash[:notice] = "Please fill in the required information."
       render 'new'
     end
+  end
+
+  def destroy
+    @owner = Owner.find(params[:id])
+    @owner.delete
+    redirect_to owners_path
   end
 
   protected
