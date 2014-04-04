@@ -1,0 +1,11 @@
+<h1>Submit a new Building</h1>
+
+<%= simple_form_for @building do |f| %>
+  <%= f.input :name, label: 'Building Name', required: true %>
+  <%= f.input :address, label: 'Street Address', required: true  %>
+  <%= f.input :city, required: true  %>
+  <%= f.input :state, collection: Building::STATES, required: true %>
+  <%= f.input :postalcode, label: 'Postal Code', required: true  %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<%- end -%>
