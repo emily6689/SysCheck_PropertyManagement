@@ -17,10 +17,14 @@ class BuildingsController < ApplicationController
     end
   end
 
+  def show
+    @building = Building.find(params[:id])
+  end
+
   protected
 
   def building_params
-    params.require(:building).permit(:name, :address, :city, :state, :postalcode, :description)
+    params.require(:building).permit(:name, :address, :city, :state, :postalcode, :owner, :description)
   end
 
 end
