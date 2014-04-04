@@ -37,18 +37,24 @@ end
 
 group :development do
   gem 'quiet_assets'
+  gem 'rails_layout'
 end
 
 group :test do
   gem 'capybara'
   gem 'shoulda'
-  gem 'valid_attributes'
+  gem 'valid_attribute'
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+
+gem 'simple_form'
+gem 'foundation-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
